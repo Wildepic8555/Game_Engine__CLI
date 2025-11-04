@@ -6,6 +6,8 @@
 int realsize = 50;
 //sets player char
 int playerCharASCIIValue = 87;
+//Sets line char in ascii
+int lineChar = 35;
 
 
 int size;
@@ -13,7 +15,7 @@ int size;
 void lineGen() {
     int j = 1;
     while (j < (realsize +1)) {
-        printf("#");
+        putchar(lineChar);
         j++;
     }
 }
@@ -43,7 +45,7 @@ void frameGen(int x) {
     lineGen();
     //New line and first #
     printf("\n");
-    printf("#");
+    putchar(lineChar);
     //Move player from first #
     leftMasker(leftMask);
     //Places player char
@@ -51,7 +53,7 @@ void frameGen(int x) {
     //Generates void between player and last #
     rightMasker(rightMask);
     //Spawns last #
-    putchar(35);
+    putchar(lineChar);
     //Whitout bottom line to high
     printf("\n");
     //Generates bottom line
