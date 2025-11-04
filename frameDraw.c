@@ -11,7 +11,7 @@
 #include "frameDraw.h"
 
 //set size of lines
-int sizemax;
+int sizeNormal;
 //sets player char
 int playerCharASCIIValue;
 //Sets line char in ascii
@@ -24,16 +24,16 @@ int size2;
 
 //Inits the frame gen variables
 void init(int sizemaxlocal , int playerCharASCIIValueLocal , char lineCharASCIIValueLocal , int objectXLocal) {
-    sizemax = sizemaxlocal;
+    sizeNormal = sizemaxlocal;
     playerCharASCIIValue = playerCharASCIIValueLocal;
     lineChar = lineCharASCIIValueLocal;
-    size2 = sizemax -2;
+    size2 = sizeNormal -2;
     frameGen(objectXLocal);
 }
 //Generates the two lines top and bottom
 void lineGen() {
     int j = 1;
-    while (j < (sizemax +1)) {
+    while (j < (sizeNormal +1)) {
         putchar(lineChar);
         j++;
     }
@@ -65,23 +65,31 @@ void frameGen(int x) {
     //Calculates were Player is and were the last # is
     int rightMask = size2 -x1;
     int leftMask = x1 -1;
+
     //Generates the top line
     lineGen();
     //New line and first #
     printf("\n");
     putchar(lineChar);
+
     //Move player from first #
     leftMasker(leftMask);
+
     //Places player char
     putchar(playerCharASCIIValue);
+
     //Generates void between player and last #
     rightMasker(rightMask);
+
     //Spawns last #
     putchar(lineChar);
+
     //Whitout bottom line to high
     printf("\n");
+
     //Generates bottom line
     lineGen();
+
     //DONT DELETE whitout this bottom line works incorrect
     printf("\n");
 }
