@@ -9,7 +9,7 @@ int playerCharASCIIValue = 87;
 //Sets line char in ascii
 int lineChar = 35;
 
-//test
+
 int size;
 //Generates line
 void lineGen() {
