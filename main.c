@@ -13,7 +13,6 @@ int realsizeY = 5;
 int playerX = 1;
 int playerY = 5;
 
-//Move 1 time from left to right , right to left
 int main(void) {
     //Init frame gen
     init(realsizeX , 87, 49 , playerX , playerY,realsizeY);
@@ -50,7 +49,4 @@ int main(void) {
         }
 
     }
-
-
-    return 0;
 }
