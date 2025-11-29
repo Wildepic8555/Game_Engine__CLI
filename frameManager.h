@@ -10,6 +10,7 @@ void setPlayerLocation(int x, int y);
 void setPlayerDesign(char Design);
 void setLineDesign(char Design);
 void frameUpdate();
+void scoreBoard(int score , int score2);
 void setObject1(int x , int y , char Design);
 void setObject2(int x , int y , char Design);
 

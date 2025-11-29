@@ -9,4 +9,7 @@ add_executable(Game_Engine main.c
         getKey.c
         getKey.h
         frameManager.c
-        frameManager.h)
+        frameManager.h
+        scoreboard_draw.c
+        scoreboard_draw.h
+)

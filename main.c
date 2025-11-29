@@ -8,7 +8,9 @@ int main(void) {
     setPlayerLocation(5 ,2);
     setPlayerDesign('P');
     setLineDesign('#');
-    setObject1(10 ,1 ,'1');
-    setObject2(10 ,2 ,'2');
+    setObject1(10 ,2 ,'1');
+    setObject2(10 ,3 ,'2');
+    scoreBoard(1 , 1000);
     frameUpdate();
+    return 5;
 }
