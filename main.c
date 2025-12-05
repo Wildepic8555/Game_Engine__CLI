@@ -5,13 +5,13 @@
 #include "getKey.h"
 
 int player_location_x = 2;
-int player_location_y = 3;
+int player_location_y = 5;
 
-int player2_location_x = 10;
-int player2_location_y = 1;
+int player2_location_x = 49;
+int player2_location_y = 5;
 
-const int map_x = 11;
-const int map_y = 5;
+const int map_x = 50;
+const int map_y = 10;
 
 void player_movement() {
     char pressedKey = getKey();
@@ -47,9 +47,10 @@ int main(void) {
         player_movement();
         setSize(map_x, map_y);
         setPlayerLocation(player_location_x ,player_location_y);
-        setPlayerDesign('P');
-        setLineDesign('#');
+        setPlayerDesign('I');
         setObject1(player2_location_x ,player2_location_y ,'I');
+        setObject2(25 , 5 , 'o');
+        setLineDesign('#');
         scoreBoard(i, i);
         frameUpdate();
     }
