@@ -35,9 +35,6 @@ void player_movement() {
             player2_location_y++;
         }
     }
-    if ('e' == pressedKey) {
-        return;
-    }
 }
 
 int main(void) {
