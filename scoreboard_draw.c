@@ -3,7 +3,6 @@
 //
 
 #include "scoreboard_draw.h"
-
 #include <stdio.h>
 
 int scoreBoardSize;
