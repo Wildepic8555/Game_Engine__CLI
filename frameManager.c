@@ -3,7 +3,6 @@
 //
 #include <stdlib.h>
 #include "frameManager.h"
-#include <stdio.h>
 #include <unistd.h>
 
 #include "frameDraw.h"
