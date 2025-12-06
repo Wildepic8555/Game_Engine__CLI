@@ -51,5 +51,4 @@ int main(void) {
         scoreBoard(i, i);
         frameUpdate();
     }
-    return 5;
 }
