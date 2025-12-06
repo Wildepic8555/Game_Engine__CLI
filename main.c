@@ -2,9 +2,7 @@
 #include "getKey.h"
 
 int main(void) {
-    int i = 0;
-    while (1) {
-        i++;
+        //Set map size
         setSize(15, 5);
         setPlayerLocation(9 ,2);
         setPlayerDesign('P');
@@ -13,8 +11,4 @@ int main(void) {
         setObject2(10 ,3 ,'2');
         scoreBoard(0, 0);
         frameUpdate();
-
-
-    }
-    return 5;
 }
