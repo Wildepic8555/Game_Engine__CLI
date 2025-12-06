@@ -11,4 +11,10 @@ int main(void) {
         setObject2(10 ,3 ,'2');
         scoreBoard(0, 0);
         frameUpdate();
+
+        /*
+         * getKey(); usage:
+         *      char key = getKey();
+         * Gives back the pressed key into char key;
+         */
 }
