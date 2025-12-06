@@ -3,6 +3,8 @@
 #include <unistd.h>
 #include <sys/select.h> // For select()
 
+//This was Made by AI
+
 /**
  * Reads a single key press immediately, or returns 'e' if no key is pressed
  * within approximately 1/60th of a second (16.67 ms).
