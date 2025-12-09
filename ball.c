@@ -8,8 +8,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int ballStartX = 25;
-int ballStartY = 5;
+int ballStartX = 13;
+int ballStartY = 4;
 int sideMultiplier;
 int minusMultiplier = -1;
 int randomX = 1;
@@ -39,7 +39,7 @@ void ball_movement(int *ball_location_x , int *ball_location_y , int map_height 
             minusMultiplier = 1;
         }
         //If ball down ,set ball movement up
-        if (*ball_location_y > 8) {
+        if (*ball_location_y > 5) {
             minusMultiplier = -1;
         }
 
@@ -48,11 +48,19 @@ void ball_movement(int *ball_location_x , int *ball_location_y , int map_height 
         *ball_location_y = *ball_location_y + randomY;
 
         //Makes ball go to mid
-        if (*ball_location_x < 2 || *ball_location_x > 49) {
+        if (*ball_location_x < 2 || *ball_location_x > 25) {
             srand(time(NULL));
             *ball_location_x = ballStartX;
             *ball_location_y = (rand() % map_height +1);
             ballStartY = *ball_location_y;
+        }
+        //Makes ball go from player to player 2
+        if (*ball_location_y == player_location_y && *ball_location_x < 4) {
+            sideMultiplier = 1;
+        }
+        //Makes ball go from player2 to player
+        if (*ball_location_y == player2_location_y && *ball_location_x > 23) {
+            sideMultiplier = -1;
         }
         scoreCheck(*ball_location_x , *ball_location_y , player_location_y , player2_location_y);
         currentTick = 0;
@@ -107,7 +115,7 @@ void randomSite() {
 }
 //Check if 1 player scored
 void scoreCheck(int x , int y , int py , int py2) {
-    if (x > 48 && y != py2) {
+    if (x > 24 && y != py2) {
         scoreLeft++;
     }
     if (x < 3 && y != py) {

@@ -5,17 +5,17 @@
 
 //Player position variables and init places
 int player_location_x = 2;
-int player_location_y = 5;
+int player_location_y = 4;
 
-int player2_location_x = 49;
-int player2_location_y = 5;
+int player2_location_x = 25;
+int player2_location_y = 4;
 
-int ball_location_x = 25;
-int ball_location_y = 5;
+int ball_location_x = 13;
+int ball_location_y = 4;
 
 //Define Map Size
-const int map_x = 50;
-const int map_y = 10;
+const int map_x = 26;
+const int map_y = 7;
 
 bool gameIsRunning = true;
 
