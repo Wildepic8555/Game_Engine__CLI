@@ -12,4 +12,10 @@ add_executable(Game_Engine main.c
         frameManager.h
         scoreboard_draw.c
         scoreboard_draw.h
+        player.c
+        player.h
+        header.c
+        header.h
+        ball.c
+        ball.h
 )
