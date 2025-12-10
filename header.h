@@ -5,7 +5,7 @@
 #ifndef GAME_ENGINE_HEADER_H
 #define GAME_ENGINE_HEADER_H
 
-void header();;
-void gameOver();
+void header();
+void gameOver(int winner);
 
 #endif //GAME_ENGINE_HEADER_H

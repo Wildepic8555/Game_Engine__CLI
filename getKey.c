@@ -12,7 +12,7 @@
  * @return The character pressed, or 'e' on timeout/no key pressed.
  */
 int getKey() {
-    char c = 'e';
+    char c = '1';
     struct termios oldt, newt;
     int fd = STDIN_FILENO;
 
@@ -49,12 +49,6 @@ int getKey() {
 
     // 3. Restore old terminal settings
     tcsetattr(fd, TCSANOW, &oldt);
-
-    // 4. Check the result of the select operation
-    if (select_result <= 0) {
-        // select_result = 0 means timeout, select_result = -1 means error
-        return 'e'; // Return 'e' on timeout or error
-    }
 
     // A key was pressed. 'c' holds the key.
     return c;

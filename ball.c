@@ -24,13 +24,9 @@ void randomSite();
 void scoreCheck(int x , int y , int py , int py2);
 
 void ball_movement(int *ball_location_x , int *ball_location_y , int map_height , int player_location_y , int player2_location_y) {
-    //When ball in mid choose random site to go (left , right)
-    if (*ball_location_x == ballStartX && *ball_location_y == ballStartY) {
-        randomSite();
-    }
     currentTick++;
-    //After 12 frames update ball
-    if (currentTick == 12) {
+    //After 8 frames update ball
+    if (currentTick == 8) {
         minusMultiplierFunc();
         sideMultiplierFunc();
 
@@ -53,13 +49,15 @@ void ball_movement(int *ball_location_x , int *ball_location_y , int map_height 
             *ball_location_x = ballStartX;
             *ball_location_y = (rand() % map_height +1);
             ballStartY = *ball_location_y;
+            //When ball in mid choose random site to go (left , right)
+            randomSite();
         }
         //Makes ball go from player to player 2
-        if (*ball_location_y == player_location_y && *ball_location_x < 4) {
+        if (*ball_location_y == player_location_y && *ball_location_x < 8 && *ball_location_x > 5) {
             sideMultiplier = 1;
         }
         //Makes ball go from player2 to player
-        if (*ball_location_y == player2_location_y && *ball_location_x > 23) {
+        if (*ball_location_y == player2_location_y && *ball_location_x > 19 && *ball_location_x < 22) {
             sideMultiplier = -1;
         }
         scoreCheck(*ball_location_x , *ball_location_y , player_location_y , player2_location_y);
@@ -122,4 +120,8 @@ void scoreCheck(int x , int y , int py , int py2) {
         scoreRight++;
     }
 }
-
+//Resets score
+void resetScore() {
+    scoreLeft = 0;
+    scoreRight = 0;
+}
