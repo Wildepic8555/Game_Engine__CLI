@@ -1,6 +1,8 @@
-I try to make games in CLI
+Fully working Pong in C /Terminal
 
-In the future I will try to make from this script a fully functioning video game template.
+Player 1 control : w-s
+
+Player 2 control : k-m 
 
 You also need to enable Terminal Emulation for it to work in CLion.
 
