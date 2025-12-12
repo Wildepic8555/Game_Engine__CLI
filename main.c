@@ -69,5 +69,9 @@ void getWinner() {
 void resetGame() {
     gameIsRunning = true;
     resetScore();
+    player_location_x = 6;
+    player_location_y = 4;
+    player2_location_x = 21;
+    player2_location_y = 4;
     system("clear");
 }
