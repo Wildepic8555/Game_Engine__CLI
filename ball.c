@@ -113,10 +113,10 @@ void randomSite() {
 }
 //Check if 1 player scored
 void scoreCheck(int x , int y , int py , int py2) {
-    if (x > 24 && y != py2) {
+    if (x > 24) {
         scoreLeft++;
     }
-    if (x < 3 && y != py) {
+    if (x < 3) {
         scoreRight++;
     }
 }
